@@ -1,0 +1,12 @@
+PLANS! 
+
+Make HTA - - - - - - - - - - - - - - - - - (X)
+Make Buttons                               (X)
+Make HTA work with BAT files - - - - - - - (X)
+Make HTA work with EXE files               (X)
+Make buttons work - - - - - - - - - - - - -(X)
+Have keyboard "UpDown" arrow keypress work ( )
+Keyboards input must decide game - - - - - ( )
+Make buttons have pictures seperatly       ( )
+Customize HTA to perfection - - - - - - - -( )
+ 

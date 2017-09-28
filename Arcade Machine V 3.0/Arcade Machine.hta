@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arcade Machine</title>
+<link rel="Stylesheet" type="text/css" href="Stylesheets/MasterStyle.css">
+
+<HTA:APPLICATION
+ APPLICATIONNAME = "ARCADE MACHINE"
+ ID = "AM 1.0"
+ VERSION = "1.0"
+ SCROLL = "no"
+ SINGLEINSTANCE = "yes"
+ WINDOWSTATE = "maximize"
+ SHOWINTASKBAR = "yes"
+ INNERBORDER = "no"
+ BORDERSTYLE = "normal"
+ SYSMENU = "no"
+ CONTEXTMENU = "no"
+> 
+
+<style>
+body {
+ background-color: #29202B;
+ background-image: url("Images/BG/BG_Solair.gif");
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center; 
+}
+.buttonForGBA{
+	background-image: url("Images/GBA/GBA Logo Fixed2.png");
+	background-size: contain; 
+	background-color: lavender;
+	background-repeat: no-repeat;
+    background-attachment: absolute;
+	background-position: center; 
+	border: 3px black;
+	text-align: left;
+	font-size: 16px;
+	color: black;
+	width: 300px; 
+	height: 50px; 
+	border-collapse: separate;
+    border: 1px solid black;
+    margin: 4px;
+    box-shadow: 5px 5px 5px #ff0000;
+}
+</style> 
+<script>
+var divID; // for hideDiv(Div ID). 
+var bgNum = getRandomNumber(); // Generates a random number for the random background image. 
+
+// Function for hiding and showing a div.   
+function hideDiv(divID){
+var gameList; 
+	gameList = document.getElementById(divID);
+if (gameList.style.display == 'block') {gameList.style.display = 'none'} 
+else if (gameList.style.display == 'none') {gameList.style.display = 'block'}
+else {alert("Function hideDIV failed!")};
+};
+// Generates a (semi-random) number for the background images. It changes them acordingly. 
+function getRandomNumber(){
+var randNum = Math.floor(Math.random() * 3)
+return randNum;
+};
+
+// The Background Image Changer. Does what it's advertised. 
+function changeBG(){
+++bgNum;
+if 		(bgNum == 1) {document.body.style.backgroundImage = 'url("Images/BG/BG_Firelink.gif")';}
+else if (bgNum == 2) {document.body.style.backgroundImage = 'url("Images/BG/BG_DarkSoulsCave.gif")';}
+else if (bgNum == 3) {document.body.style.backgroundImage = 'url("Images/BG/BG_Solair.gif")';}
+else {bgNum = 0}
+};
+
+function startup(){
+ changeBG();
+}
+</script> 
+
+<!-- Start-ups for the games (IN .EXE FILES) --> 
+<SCRIPT FOR="Advance Wars" EVENT="onClick" LANGUAGE="VBScript">
+ Set objShell = CreateObject("Shell.Application")
+ objShell.ShellExecute "RunGame\RunAdvancedWars.exe", "", "", "runas", 1
+</SCRIPT>
+
+<SCRIPT FOR="Castlevania" EVENT="onClick" LANGUAGE="VBScript">
+ Set objShell = CreateObject("Shell.Application")
+ objShell.ShellExecute "RunGame\RunCastlevania_COTM.exe", "", "", "runas", 1
+</SCRIPT>
+
+<SCRIPT FOR="Harvest Moon" EVENT="onClick" LANGUAGE="VBScript">
+ Set objShell = CreateObject("Shell.Application")
+ objShell.ShellExecute "RunGame\RunHarvestMoon_MFoMT.exe", "", "", "runas", 1
+</SCRIPT>
+
+<SCRIPT FOR="Kirby And The Amazing Mirror" EVENT="onClick" LANGUAGE="VBScript">
+ Set objShell = CreateObject("Shell.Application")
+ objShell.ShellExecute "RunGame\RunKirby_TAM.exe", "", "", "runas", 1
+</SCRIPT>
+
+<SCRIPT FOR="Metal Slug Advance" EVENT="onClick" LANGUAGE="VBScript">
+ Set objShell = CreateObject("Shell.Application")
+ objShell.ShellExecute "RunGame\RunMetalSlugAdvance.exe", "", "", "runas", 1
+</SCRIPT>
+
+<SCRIPT FOR="Super Street Fighter 2 Turbo" EVENT="onClick" LANGUAGE="VBScript">
+ Set objShell = CreateObject("Shell.Application")
+ objShell.ShellExecute "RunGame\RunSuperStreetFighter2Turbo.exe", "", "", "runas", 1
+</SCRIPT>
+
+</head>
+
+
+<body onload="startup()">
+
+	<h2> Arcade Machine </h2> 
+
+	<button onclick="hideDiv('testDiv')" style="postition: relative;">Options</button>
+	
+	<div id="testDiv" style="display: none;">
+		
+		<button onclick="changeBG()" style="position: relative; left: 0px; top: 10px; width: 150px;">Change Background</button>
+	</div>
+
+<div>
+<h1 style="text-align: center; font-size: 150%; color: yellow; "> GameBoy Advanced </h1>
+<!-- GBA GAMES -->
+<!-- Advanced Wars -->                <button TYPE="Run" NAME="Advance Wars" class="buttonForGBA" VALUE="Click">Advanced Wars</button>
+<br>
+<!-- Castlevania -->                  <button TYPE="Run" NAME="Castlevania" class="buttonForGBA" VALUE="Click">Castlevania</button>
+<br>
+<!-- Harvest moon -->                 <button TYPE="Run" NAME="Harvest Moon" class="buttonForGBA" VALUE="Click">Harvest Moon</button>
+<br>
+<!-- kirby & and amazing mirror -->   <button TYPE="Run" NAME="Kirby And The Amazing Mirror" class="buttonForGBA" VALUE="Click">Kirby and <br>The Amazing Mirror</button>
+<br>
+<!-- Metal Slug Advanced -->          <button TYPE="Run" NAME="Metal Slug Advance" class="buttonForGBA" VALUE="Click">Metal Slug Advance</button>
+<br>
+<!-- Super Street Fighter 2 Turbo --> <button TYPE="Run" NAME="Super Street Fighter 2 Turbo" class="buttonForGBA" VALUE="Click">Super<br>Street Fighter 2 Turbo</button>
+<br>
+</div>
+
+</body>
+</html>

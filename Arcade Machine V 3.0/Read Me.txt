@@ -1,0 +1,31 @@
+Arcade Machine Version 3. 27.09.2017
+
+HOW IT WORKS!: 
+The HTA (html Application, Yes, That is a thing.) 
+starts up. When hitting the "start game" buttons the HTA 
+then runs a VBScript that opens an EXE file, made 
+from a BAT file that opens the GBA games. 
+
+Not very advanced stuff. This was my starting brick on coding.
+However, it was also my highest achieavement so...whatever. 
+
+I worked on this a while back and a lot of it was sloppy 
+code-work and an excessive amount of bugs. I diden't 
+really understand JavaScript and that really hit my 
+today. I fixed a lot of it but when originally writing 
+this I diden't actually think I would show it to anyone...
+or work on it again. 
+
+However! I fixed a lot of it and it works now with five
+different games. (in which. It kinda alway did.) 
+It worked, but was less good. Actually, you can still 
+check it out! There's a folder called "Previous Arcade 
+Machines" that show my demise! Enjoy! 
+
+OH! By the way, It's probably gonna be flagged by your 
+anti-virus software! and rightfully so. The code access'es
+your harddrive (technically) and runs bats (exe) files to 
+access the GBA files.  
+
+Sincerely your, Benjamin Aarli. 
+

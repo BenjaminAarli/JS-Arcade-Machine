@@ -1,0 +1,40 @@
+html {
+	background-color: #2C001E; /* BG COLOR - Dark purple */ 
+	border: 2px solid black;
+        outline-color: #ffffff; 
+        outline-style: groove; 
+}
+
+body {
+	background-color: #5E2750;
+}
+
+h1 {
+	color: Black; 
+	text-align: center;
+	
+}
+
+p {
+	color: black; 
+	text-align: center; 
+    border: 1px solid black;
+    outline-style: groove;
+    outline-color: red;
+}
+
+
+
+.button {
+	background-color: #888888;
+	text-align: center;
+	font-size: 20px; 
+	color: white;
+	border: 3px solid #404040;
+	padding: /* Tall-ness --> */ 2px /* Width --> */  2px;
+    display: block;
+	width: 250px; 
+	height: 80px;
+
+
+}

@@ -1,0 +1,59 @@
+Arcade Machine Updates. 
+
+As this project grew and more and more became error handling and problem solving I realized 
+that I need a way to see my previous misstakes so I won't be repeating them as much as I have. 
+
+
+
+--------------------------------------------------
+Version 0.x2 /19th of march 2017.
+
+*Found Bug
+Bat (or, actually EXE files) need to be re-built.
+The bat(EXE) files start where the HTA starts, so 
+// 
+cd .. (<-- THIS IS THE PROBLEM.)
+cd Games\Games GBA
+start "" "Game.gba" 
+//
+
+I removed the problem. 
+----------------------------------------------
+Version 0.x2 /23rd of april 2017. 
+
+*Not technically a bug
+Realized that the HTA looks like shit so decided to rework it into a 
+more "retro" (Arcade Machine) look. 
+
+I also created a new HTA file, becoming the (MASTER FILE) that 
+starts the entirety of the application. It will be a 
+"Press START to begin" screen. That's pretty much it. 
+-----------------------------------------------
+Version 0.x2 /25th of april 2017. 
+
+*Not technically a bug
+Changed the name for the file "Bug Reports.txt" into 
+"Status Reports.txt". Sounds cooler. 
+
+I can't remember all the changes cause I've done a lot and forgotten
+to write it down but the basic gist of it is. (I wrote the previous update today because I forgot to do it at the time of the updateing)
+*Created new folder called "Code Backups" in which stores backups. 
+*I've played around with design and decided, as previously stated, an arcade-ick look.
+*Created a new folder called "Pictures", that contains pictures of Kirby as of the moment. 
+
+Anything else was either edits in the original code (In which I have back-ups off)
+or seperate, unimportant matters. 
+-----------------------------------------------
+Version 0.3 /26th of september 2017. 
+
+Fixed a lot of sloppy code. 
+Moved some files into folders instead of having them out in the open. 
+Changed some file names, within and out of scripts. So it still works, but looks better.  
+Cried uncontrollably in the shower. This is a joke. or is it? Nobody ever reads these so I'm fine. 
+
+So, currently I have four (4) different arcade machine scripts all doing (essentially) the same 
+thing. So I decided to make an index.hta and page2.hta/page3.hta/page4.hta 
+(or gba.hta/nes.hta/snes.hta individually).
+
+
+
